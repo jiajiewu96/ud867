@@ -13,8 +13,8 @@ public class Jokes {
         "How do you keep a bagel from getting away?\n Put lox on it."
     };
     private int jokeArraySize = jokes.length;
-    public String[] getJokes(){
-        return jokes;
+    public String getJoke(int i){
+        return jokes[i];
     }
     public int getSize(){
         return jokeArraySize;
