@@ -22,12 +22,12 @@ public class MyEndpoint {
 
     /** A simple endpoint method that takes a name and says Hi back */
     @ApiMethod(name = "getJokes")
-    public Joke getJoke() {
-        Joke joke;
+    public ResponseModel getJoke() {
+        ResponseModel responseModel = new ResponseModel();
         JokeProvider jokeProvider = new JokeProvider();
-        joke = jokeProvider.getJoke();
+        responseModel.setData(jokeProvider.getJoke());
 
-        return joke;
+        return responseModel;
     }
 
 }

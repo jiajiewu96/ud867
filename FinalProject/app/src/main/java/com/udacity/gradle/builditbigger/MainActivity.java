@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             Joke joke = new Joke();
 
             try {
-                joke = myApiService.getJokes().execute();
+                joke = myApiService.getJokes().execute().getData();
                 return joke;
             } catch (IOException e) {
                 e.printStackTrace();
