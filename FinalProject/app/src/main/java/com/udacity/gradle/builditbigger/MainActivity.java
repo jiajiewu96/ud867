@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class EndpointsAsyncTask extends AsyncTask<Void, Void, com.udacity.gradle.builditbigger.backend.myApi.model.Joke> {
-        private static MyApi myApiService = null;
+        private MyApi myApiService = null;
 
         @Override
         protected Joke doInBackground(Void... params) {
