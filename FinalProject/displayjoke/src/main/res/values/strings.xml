@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DisplayJoke</string>
-    <string name="joke_key">com.udacity.gradle.builditbigger.JOKE_KEY</string>
+    <string name="SETUP_KEY">com.udacity.gradle.builditbigger.SETUP_KEY</string>
+    <string name="PUNCHLINE_KEY">com.udacity.gradle.builditbigger.PUNCHLINE_KEY</string>1
 </resources>

@@ -1,16 +1,13 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -19,7 +16,6 @@ import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 import com.udacity.gradle.builditbigger.backend.myApi.model.Joke;
 import com.udacity.gradle.builditbigger.displayjoke.DisplayJoke;
-import com.udacity.gradle.builditbigger.jokeProvider.JokeProvider;
 
 import java.io.IOException;
 
@@ -62,7 +58,11 @@ public class MainActivity extends AppCompatActivity {
 
     void launchDisplayActivity(Joke joke){
         Intent intent = new Intent(this, DisplayJoke.class);
-
+        String setUp = joke.getSetUp();
+        String punchLine = joke.getPunchLine();
+        intent.putExtra(getResources().getString(R.string.SETUP_KEY), setUp);
+        intent.putExtra(getResources().getString(R.string.PUNCHLINE_KEY), punchLine);
+        startActivity(intent);
     }
 
     class EndpointsAsyncTask extends AsyncTask<Void, Void, com.udacity.gradle.builditbigger.backend.myApi.model.Joke> {
