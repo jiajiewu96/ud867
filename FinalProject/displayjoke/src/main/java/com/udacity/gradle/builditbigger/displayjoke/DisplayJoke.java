@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.udacity.gradle.builditbigger.jokeProvider.Joke;
-
 public class DisplayJoke extends AppCompatActivity {
 
     @Override

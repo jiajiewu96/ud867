@@ -1,15 +1,13 @@
 package com.udacity.gradle.builditbigger.backend;
 
-import com.udacity.gradle.builditbigger.jokeProvider.Joke;
-
 public class ResponseModel {
-    private Joke myData;
+    private String myData;
 
-    public Joke getData() {
+    public String getData() {
         return myData;
     }
 
-    public void setData(Joke data) {
+    public void setData(String data) {
         myData = data;
     }
 }
