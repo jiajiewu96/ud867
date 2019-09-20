@@ -1,23 +1,18 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.free;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.api.client.extensions.android.http.AndroidHttp;
-import com.google.api.client.extensions.android.json.AndroidJsonFactory;
-import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
-import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
-import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
-import com.udacity.gradle.builditbigger.displayjoke.DisplayJoke;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.IOException;
+import com.udacity.gradle.builditbigger.ApiResponseHandler;
+import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
+import com.udacity.gradle.builditbigger.R;
+import com.udacity.gradle.builditbigger.displayjoke.DisplayJoke;
 
 
 public class MainActivity extends AppCompatActivity implements ApiResponseHandler{
@@ -59,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseHandle
 
     void launchDisplayActivity(String joke){
         Intent intent = new Intent(this, DisplayJoke.class);
-        intent.putExtra(getResources().getString(R.string.JOKE_KEY), joke);
         startActivity(intent);
     }
 

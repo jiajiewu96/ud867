@@ -7,24 +7,12 @@
     tools:context=".DisplayJoke">
 
     <TextView
-        android:id="@+id/tv_setup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_punchline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Jokes Haha" />
-
-    <TextView
-        android:id="@+id/tv_punchline"
+        android:id="@+id/tv_joke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_setup"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Jokes Haha" />
 </androidx.constraintlayout.widget.ConstraintLayout>

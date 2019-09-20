@@ -11,14 +11,11 @@ public class DisplayJoke extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_joke);
-        TextView setupTextView = findViewById(R.id.tv_setup);
-        TextView punchLineTextView = findViewById(R.id.tv_punchline);
+        TextView jokeLineTextView = findViewById(R.id.tv_joke);
         Bundle intentExtras = getIntent().getExtras();
         if(intentExtras != null){
-            String setup = intentExtras.getString(getResources().getString(R.string.SETUP_KEY));
-            String punchLine = intentExtras.getString(getResources().getString(R.string.PUNCHLINE_KEY));
-            setupTextView.setText(setup);
-            punchLineTextView.setText(punchLine);
+            String punchLine = intentExtras.getString(getResources().getString(R.string.JOKE_KEY));
+            jokeLineTextView.setText(punchLine);
 
         }
     }

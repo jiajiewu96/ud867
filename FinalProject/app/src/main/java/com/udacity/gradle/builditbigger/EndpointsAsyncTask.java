@@ -15,7 +15,7 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private ApiResponseHandler mApiResponseHandler;
     private Exception mException;
 
-    void setApiResponseHandler(ApiResponseHandler apiResponseHandler){
+    public void setApiResponseHandler(ApiResponseHandler apiResponseHandler){
         mApiResponseHandler = apiResponseHandler;
     }
 
